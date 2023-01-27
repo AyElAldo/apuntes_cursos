@@ -32,9 +32,18 @@ let isMonday = true;
 * Symbol - Es un valor único que no es igual a otro valor
 
 ## **Palabras reservadas**
-Son palabras que ya están definidas por el lenguaje y cada una tiene un uso en específico. Por esta razón, éstas no se pueden usar para nombrar variables.
+Son palabras que ya están definidas por el lenguaje y cada una tiene un uso en específico. Por esta razón, éstas no se pueden usar nombrar variables.
 
-*****************************
+********************************************
+
+## **Condiciones y Ciclos**
+Cuando estamos creando un programa más complejo, es seguro que tenemos que usar **estructuras de control** e **iteradoras**, o también llamdas *condiciones* y *ciclos* respectivamente.
+
+### **Condiciones**
+Existen partes en la lógica del programa en donde es necesaria la toma de decisiones
+
+
+********************************************
 
 ## **Arreglos**
 Es un tipo de colección de datos que contienen un grupo de datos del mismo tipo.
@@ -42,7 +51,7 @@ Es un tipo de colección de datos que contienen un grupo de datos del mismo tipo
 En **JavaScript**, los arreglos se definen de la siguiente forma:
 ```js
 // Inicializando arreglo con cuatro elementos
-let amigxs = ['Mariana', 'Cinthya', 'Haid', 'Ivan'];    
+let amigxs = ['Mariana', 'Cinthya', 'Haid', 'Ivan', 'Chrispo', 'Garbiela'];    
 ```
 O también:
 ```js
@@ -218,4 +227,91 @@ function listarNombres(n1, n2, n3){
 // Imprime la lista
 console.log("Lista: " + listarNombres("Aldo","Cinthya", "Mariana"))
 ```
+
+********************************************
+
+## **Pasos por valor y referencia**
+En ***JavaScript***, todos los primitivos son pasados por *valor* y los objetos literales por *referencia*. 
+
+Por ***valor*** nos referimos a que al momento de asignarle a una variable alguna otra (primitivo), solamente se copia el valor de esa variable y se pasa a otra. De esta manera, si modificamos alguna de las variables, no se cambian ambas.
+
+Para más claridad, tenemos el siguiente ejemplo:
+```js
+// Se asigna un valor para X
+let x = 10; // x = 10
+// Se asigna el valor que tiene actualmente X a Y 
+let y = x; // y = 10
+
+console.log("--- Valores antes del cambio --- ");
+// Corroboramos que son iguales
+console.log("x: " + x + "  --  y: " + y);
+
+
+// Cambiamos el valor de Y
+y = 5;
+console.log("--- Valores después del cambio --- ");
+// Corroboramos que cambia solamente el valor de Y
+console.log("x: " + x + "  --  y: " + y);
+``` 
+Salida:
+```
+--- Valores antes del cambio ---
+x: 10 -- y: 10
+
+--- Valores después del cambio ---
+x: 10 -- y: 5
+```
+
+Sin embargo, cuando hablamos de objetos literales, al cambiar algun valor en algun objeto que está siendo apuntado por otro, éste también cambia su contenido. Esto se debe a que al hacer algo como:
+```js
+persona1 = persona2;
+```
+Lo que sucede es que ***persona1*** apunta en memoria a donde está el valor de ***persona2***. 
+
+- **Ejemplo: Cambiamos el nombre de una persona.**
+```js
+// Creando persona
+let persona1 = {
+    nombre: 'Aldo';
+    edad = 20;
+};
+
+let persona2 = persona1;
+console.log(persona1.nombre, persona2.nombre);
+
+// Cambiamos el nombre de la persona1
+persona1.nombre = 'Daniela';
+// Verificamos el resultado
+console.log(persona1.nombre, persona2.nombre);
+```
+Salida:
+```
+Aldo Aldo
+Daniela Daniela
+```
+
+Para evitar esto y romper las referencias se usa tres puntos **'...'**. A esto se le llama operados ***spread***.
+
+- **Ejemplo: Cambiando nombres (continuación del código anterior)**.
+```js
+// Usando spread
+let persona3 = {...persona1};
+persona3.nombre = 'Garbiela';
+console.log(persona1.nombre, persona2.nombre, persona3.nombre);
+```
+Salida:
+```
+Chrispo Chrispo Garbiela
+```
+
+- **Ejemplo: Usando SPREAD para modificar una lista de compras.**
+```js
+// Ejemplo SPREAD usando listas
+let frutas = ['peras', 'manzanas', 'naranjas'];
+let productos = [...frutas];
+
+productos.push('arroz', 'maiz');
+console.table([frutas, productos]);
+```
+
 

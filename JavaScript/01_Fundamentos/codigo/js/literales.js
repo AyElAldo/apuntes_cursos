@@ -66,3 +66,49 @@ const sumaFlecha = (a, b) => a + b;
 // Imprimiendo el resultado de la suma
 console.log("El resultado de la suma es: " + sumaFlecha(5,4));
 
+
+// Se asigna un valor para X
+let x = 10; // x = 10
+// Se asigna el valor que tiene actualmente X a Y 
+let y = x; // y = 10
+
+console.log("--- Valores antes del cambio --- ");
+// Corroboramos que son iguales
+console.log("x: " + x + "  --  y: " + y);
+
+// Cambiamos el valor de Y
+y = 5;
+console.log("--- Valores después del cambio --- ");
+// Corroboramos que cambia solamente el valor de Y
+console.log("x: " + x + "  --  y: " + y);
+
+
+// Creando persona
+let persona1 = {
+    nombre: 'Aldo',
+    edad: 20
+};
+
+let persona2 = persona1;
+console.log(persona1.nombre, persona2.nombre);
+
+
+// Cambiamos el nombre de la persona1
+persona1.nombre = 'Chrispo';
+// Verificamos el resultado
+console.log(persona1.nombre, persona2.nombre);
+
+
+let persona3 = {...persona1};
+persona3.nombre = 'Garbiela';
+console.log(persona1.nombre, persona2.nombre, persona3.nombre);
+persona2.nombre = 'Mariana';
+console.log(persona1.nombre, persona2.nombre, persona3.nombre);
+
+// Ejemplo SPREAD usando listas
+let frutas = ['peras', 'manzanas', 'naranjas'];
+let productos = [...frutas];
+
+productos.push('arroz', 'maiz');
+console.table([frutas, productos]);
+
