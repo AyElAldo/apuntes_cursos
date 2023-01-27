@@ -39,10 +39,71 @@ Son palabras que ya están definidas por el lenguaje y cada una tiene un uso en 
 ## **Condiciones y Ciclos**
 Cuando estamos creando un programa más complejo, es seguro que tenemos que usar **estructuras de control** e **iteradoras**, o también llamdas *condiciones* y *ciclos* respectivamente.
 
-### **Condiciones**
-Existen partes en la lógica del programa en donde es necesaria la toma de decisiones
+### **Condiciones IF y ELSE**
+Existen partes en la lógica del programa en donde es necesaria la toma de decisiones, como ejecutar una parte del código si se cumple una condición o no. 
 
+A continuación, se presenta un ejemplo del uso de la sentencia ***if*** y ***else***. Estas sentencias nos ayudan a verificar si una condición se cumple o no.
 
+- **Ejemplo: Verificar si un número es positivo o negativo**
+```js
+// Verificar si un numero es positivo o negativo
+let numero = 1;
+// 1 > 0 (true)
+if(numero > 0){
+    console.log('El número es mayor que 0.');
+}
+console.log("Fin del programa.");
+```
+En este caso la variable ***numero*** es igual a 1.  
+Al hacer la comparación dentro del *if(numero > 0)* devuelve un ***true***. Por lo tanto, la código que se encuentra dentro de las llaves se ejecuta.
+
+Salida:
+```
+El número es mayor que 0.
+Fin del programa.
+```
+
+En caso de que no se cumple la condición que se encuentra dentro de los paréntesis, el programa ignora todo el bloque de código dentro de las llaves. 
+
+- **Ejemplo: Condición que no se cumple**
+```js
+// Ahora el número es negativo
+let numero = -4;
+// -4 > 0 (false)
+if(numero > 0){
+    // Se ignora este bloque de codigo
+    console.log('El número es mayor que 0.');
+}
+// Al no estar dentro de ninguna sentencia IF o ELSE, siempre se ejecuta esta linea.
+console.log("Fin del programa.");
+```
+Salida:
+```
+Fin del programa.
+```
+
+### **ELSE**
+La sentencia ***ELSE*** se usa para introducir un bloque de código en caso de que la condición no se cumpla.  
+De esta manera, tenemos cubiertos diferentes bloques de código para casos en los que nuestra condición se cumpla y para cuando no.
+- **Ejemplo: Uso de la sentencia *ELSE*.**
+```js
+let numero = -1;
+// -1 > 0 (false)
+if(numero > 0){
+    // Se ignora este bloque de codigo
+    console.log('El número es mayor que 0.');
+}else{
+    // Se ejectuta este bloque
+    console.log("El número no es mayor que 0.");
+}
+// Al no estar dentro de ninguna sentencia IF o ELSE, siempre se ejecuta esta linea.
+console.log("Fin del programa.");
+```
+Salida:
+```
+El número no es mayor que 0.
+Fin del programa.
+```
 ********************************************
 
 ## **Arreglos**

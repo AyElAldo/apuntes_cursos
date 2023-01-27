@@ -112,3 +112,34 @@ let productos = [...frutas];
 productos.push('arroz', 'maiz');
 console.table([frutas, productos]);
 
+
+
+// Verificar si un numero es positivo o negativo
+let numero = 1;
+// 1 > 0
+if(numero > 0){
+    console.log('El número es mayor que 0');
+}
+console.log("Fin del programa.");
+
+// Ahora el número es negativo
+let numero2 = -4;
+// -4 > 0 (false)
+if(numero2 > 0){
+    // Se ignora este bloque de codigo
+    console.log('El número es mayor que 0.');
+}
+console.log("Fin del programa.");
+
+// USO DEL ELSE
+let numero3 = -1;
+// -1 > 0 (false)
+if(numero3 > 0){
+    // Se ignora este bloque de codigo
+    console.log('El número es mayor que 0.');
+}else{
+    // Se ejectuta este bloque
+    console.log("El número no es mayor que 0.");
+}
+// Al no estar dentro de ninguna sentencia IF o ELSE, siempre se ejecuta esta linea.
+console.log("Fin del programa.");
