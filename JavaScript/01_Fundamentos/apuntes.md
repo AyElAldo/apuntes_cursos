@@ -1,4 +1,4 @@
-# Fundamentos de JavaScript (By AyElAldo)
+# Fundamentos de JavaScript
 
 
 **JavaScript** es un lenguaje débilmente tipado. Es decir, no le decimos explícitamente que tipo de variable estamos usando ya que él mismo lo interpreta.
@@ -375,4 +375,7 @@ productos.push('arroz', 'maiz');
 console.table([frutas, productos]);
 ```
 
-
+****************************************************
+# **Autor :  Aldo Santiago**
+Enero 2023
+JavaScript
