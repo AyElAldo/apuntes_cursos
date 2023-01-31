@@ -43,8 +43,94 @@ A continuación, se presentan los símbolos usados para reealizar este tipo de o
 ***Nota: Solo se revisarán los símbolos. No se explicarán las resolución de operaciones, a menos que sean propias de JavaScript.***
 
 ### **Operadores Aritméticos**
-### **Operadores Lógicos**
+En JavaScript, las operaciones aritméticas respetan los mismas leyes y jerarquías que usamos en la vida cotidiana.
+- **Suma ( + )**
+```js
+suma = 2 + 3.5; // suma = 5.5
+```
+- **Resta ( - )**
+```js
+resta = 9 - 1.4; // resta = 7.6
+```
+- **Multiplicación ( * )**
+```js
+multi = 5 * 20; // multi = 100
+```
+- **División ( / )**
+```js
+division = 200 / 4; // division = 50
+```
+- **Potencia ( ** )**
+```js
+potencia = 2 ** 4; // potencia = 16
+```
+- **Módulo ( % )**
+```js
+// Recordar que módulo es el residuo de un división
+
+modulo = 20 % 3; // modulo = 2
+```
+
+Para poder implementar más operaciones se utiliza el método ***Math***.
+
+***Ejemplo: Calcular una raiz cuadrada***
+```js
+raizCuadrada = Math.sqrt(9); // raizCuadrada = 3
+```
+
 ### **Operadores Relacionales**
+- **Mayor que ( > )**
+```js
+res = 2 > 9; // res = false
+```
+- **Mayor o igual que ( >= )**
+```js
+res = 10 >= 5; // res = true
+```
+- **Menor que ( < )**
+```js
+res = -19 < 9; // true
+```
+- **Menor o igual que ( <= )**
+```js
+res = 14 <= -10; // false
+```
+- **Igual que ( == )**
+```js
+// Usando operadores aritméticos
+res = 10 == (2*5); // res = (10 == 10) = true
+```
+**Nota: No confundir ( = ) con ( == ). El primero es un operador de asignación y el segundo un operador relacional.**
+- **Diferente que ( != )**
+```js
+res = 15 != 10; // res = true
+```
+
+### **Operadores Lógicos**
+- **AND o conjunción lógica ( && )**  
+Retorna ***true*** si todas las proposiciones son verdaderas. De lo contrario retorna ***false***.
+```js
+res = (1 < 3) && (10 != 1) && (3 == 1) // res = false
+// DESARROLANDO LA OPERACIÓN
+// res = true && true && false
+// res = false
+```
+- **OR ( || )**  
+Retorna ***true*** si al menos una proposición es verdadera. De lo contrario retorna ***false***.
+```js
+res = (7 > 3) || (4 == 2) // res = true
+// DESARROLANDO LA OPERACIÓN
+// res = true || false
+// res = true
+```
+- **NOT ( ! )**  
+Niega el valor booleano
+```js
+res = !(5 > 3); // res = false
+// DESARROLANDO LA OPERACION
+// res = !(true)
+// res = false
+```
 
 ********************************************
 
