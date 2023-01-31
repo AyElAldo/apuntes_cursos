@@ -1,4 +1,4 @@
-# Fundamentos de JavaScript
+# **Fundamentos de JavaScript (JS)**
 
 
 **JavaScript** es un lenguaje débilmente tipado. Es decir, no le decimos explícitamente que tipo de variable estamos usando ya que él mismo lo interpreta.
@@ -35,9 +35,21 @@ let isMonday = true;
 Son palabras que ya están definidas por el lenguaje y cada una tiene un uso en específico. Por esta razón, éstas no se pueden usar nombrar variables.
 
 ********************************************
+## **Operadores Aritméticos, lógicos y Relacionales en JS**
+Para relizar operaciones en ***JavaScript***, y en otros lenguajes de programación, se usan símbolos específicos que entiende cada uno de estos.
+
+A continuación, se presentan los símbolos usados para reealizar este tipo de operaciones con la sitaxis de JavaScript.
+
+***Nota: Solo se revisarán los símbolos. No se explicarán las resolución de operaciones, a menos que sean propias de JavaScript.***
+
+### **Operadores Aritméticos**
+### **Operadores Lógicos**
+### **Operadores Relacionales**
+
+********************************************
 
 ## **Condiciones y Ciclos**
-Cuando estamos creando un programa más complejo, es seguro que tenemos que usar **estructuras de control** e **iteradoras**, o también llamdas *condiciones* y *ciclos* respectivamente.
+Cuando estamos creando un programa más complejo, es seguro que tenemos que usar **estructuras de control** e **iteradoración**, o también llamadas *condicionales* y *ciclos* respectivamente.
 
 ### **Condiciones IF y ELSE**
 Existen partes en la lógica del programa en donde es necesaria la toma de decisiones, como ejecutar una parte del código si se cumple una condición o no. 
@@ -377,5 +389,5 @@ console.table([frutas, productos]);
 
 ****************************************************
 # **Autor :  Aldo Santiago**
-Enero 2023
-JavaScript
+**Enero 2023**  
+*Fundamentos de JavaScript*
