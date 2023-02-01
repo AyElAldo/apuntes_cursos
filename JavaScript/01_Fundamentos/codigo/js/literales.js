@@ -143,3 +143,14 @@ if(numero3 > 0){
 }
 // Al no estar dentro de ninguna sentencia IF o ELSE, siempre se ejecuta esta linea.
 console.log("Fin del programa.");
+
+
+// Usando operador ternario
+let n = 2;
+let resultado2 = (n < 0) ? "negativo" : "positivo";
+console.log(`El numero es ${resultado2}`);
+
+// Calculando el mayor de dos numeros
+const numMayor = (a, b) => (a > b) ? a : b;
+// Comparando numero mayor entre 10 y 15
+console.log(`El numero mayor es ${numMayor(10, 15)}`);

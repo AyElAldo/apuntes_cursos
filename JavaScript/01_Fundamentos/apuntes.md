@@ -202,6 +202,19 @@ Salida:
 El número no es mayor que 0.
 Fin del programa.
 ```
+
+## **Operador condicional ternario**
+Es una forma abreviada de hacer estructuras con **IF** y **ELSE**.
+```js
+// Usando operador ternario
+let n = 2;
+let resultado2 = (n < 0) ? "negativo" : "positivo";
+console.log(`El numero es ${resultado2}.`);
+```
+Salida para el caso de ***n*** = 2:
+```
+El numero es positivo.
+```
 ********************************************
 
 ## **Arreglos**
@@ -336,6 +349,14 @@ saludarFlecha("Aldo");
 Salida:
 ```
 Hola Aldo
+```
+
+**Otro ejemplo usando operador condicional ternario en función flecha:**
+```js
+// Calculando el mayor de dos numeros
+const numMayor = (a, b) => (a > b) ? a : b;
+// Comparando numero mayor entre 10 y 15
+console.log(`El numero mayor es ${numMayor(10, 15)}`);
 ```
 *************************************************
 
