@@ -132,6 +132,84 @@ res = !(5 > 3); // res = false
 // res = false
 ```
 
+
+********************************************
+
+## **Arreglos**
+Es un tipo de colección de datos que contienen un grupo de datos del mismo tipo.
+
+En **JavaScript**, los arreglos se definen de la siguiente forma:
+```js
+// Inicializando arreglo con cuatro elementos
+let amigxs = ['Mariana', 'Cinthya', 'Haid', 'Ivan', 'Chrispo', 'Garbiela'];    
+```
+O también:
+```js
+// El parámetro es la longitud del arreglo
+const arreglo = new Array(10);
+```
+- **Nota: Las posiciones, en la mayoría de los lenguajes de programación, inician desde cero.**
+
+## **Objetos literales**
+Son objetos que tienen pares de valores. Tienen elementos llamdos ***llaves*** que corresponden a un valor.
+- **Las llaves, en cada objeto literal, son únicas.**
+Los objetos literales se definen de la siguiente forma:
+```js
+let persona = {
+    nombre: 'Aldo',
+    apodo: 'AyElAldo',
+    edad: 20,
+    roomies: ['Padre', 'Madre', 'Hermanas'],
+    hobbies: ['Futbol','Programar']
+};
+```
+
+Existen varias formas de acceder a las propiedades. 
+Por ejemplo, en este caso vamos a acceder a ***Padre*** de dos formas distintas:
+
+### Primera forma:
+```js
+// Imprimiendo PADRE
+console.log(persona.roomies[0]);
+```
+### Segunda forma:
+```js
+// Imprimiendo PADRE
+console.log(persona['roomies'][0]);
+```
+
+## **Uso de DELETE**
+***DELETE*** es una palabra reservada que se encarga de eliminar la propiedad de algún objeto.
+
+```js
+// Eliminando la propiedad EDAD
+delete persona.edad
+```
+*************************************************
+## Métodos adicionales de los objetos
+[Leer Documentación Aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+- **Freeze:** No permite que se modifiquen las propiedades directas de un objeto. 
+
+```js
+// Haciendo un freeze a PERSONA
+Object.freeze(persona);
+
+// Ya no es posible hacer lo siguiente:
+persona.nombre = 'Aldo';
+```
+
+- **getOwnPropertyNames:** Lista solamente las propiedades de un objeto.
+- **Values:** Lista solamente los valores que corresponden a cada propiedad de un objeto.
+```js
+// Obteniendo PROPIEDADES
+let propiedades = Object.getOwnPropertyNames(personaje);
+// Obteniendo valores
+let valores = Object.values(personaje);
+
+// Imprimiendo propiedades y valores
+console.log(propiedades, valores);
+```
 ********************************************
 
 ## **Condiciones y Ciclos**
@@ -215,84 +293,117 @@ Salida para el caso de ***n*** = 2:
 ```
 El numero es positivo.
 ```
-********************************************
 
-## **Arreglos**
-Es un tipo de colección de datos que contienen un grupo de datos del mismo tipo.
+## **Switch**
+Evalúa una expresión y compara el valor de dicha expresión con otra sentencia llamada ***case***. En caso de ser igual, ejecuta el código que se encuentra en esa sentencia y las que siguen. En caso de querer romper la lectura de las demás sentencias, se usa la palabra reservada ***break***.
 
-En **JavaScript**, los arreglos se definen de la siguiente forma:
+**Ejemplo: Uso de SWITCH para saber el dia de la semana de acuerdo a una variable inicializada.**
 ```js
-// Inicializando arreglo con cuatro elementos
-let amigxs = ['Mariana', 'Cinthya', 'Haid', 'Ivan', 'Chrispo', 'Garbiela'];    
+/*
+DOMINGO = 0
+LUNES = 1
+MARTES = 2
+MIERCOLES = 3
+JIEVES = 4
+VIERNES = 5
+SABADO = 6
+*/
+
+const dia = 2 // MARTES
+
+switch(dia){
+    case 0:
+        console.log("Domingo");
+        break; // Sale del SWITCH
+    case 1:
+        console.log("Lunes");
+        break; // Sale del SWITCH
+    case 2:
+        console.log("Martes");
+        break; // Sale del SWITCH
+    case 3:
+        console.log("Miercoles");
+        break; // Sale del SWITCH
+    case 4:
+        console.log("Jueves");
+        break; // Sale del SWITCH
+    case 5:
+        console.log("Viernes");
+        break; // Sale del SWITCH
+    case 6:
+        console.log("Sábado");
+        break; // Sale del SWITCH
+    default:
+        console.log("No es valido.");
+}
 ```
-O también:
-```js
-// El parámetro es la longitud del arreglo
-const arreglo = new Array(10);
+Salida:
 ```
-- **Nota: Las posiciones, en la mayoría de los lenguajes de programación, inician desde cero.**
-
-## **Objetos literales**
-Son objetos que tienen pares de valores. Tienen elementos llamdos ***llaves*** que corresponden a un valor.
-- **Las llaves, en cada objeto literal, son únicas.**
-Los objetos literales se definen de la siguiente forma:
-```js
-let persona = {
-    nombre: 'Aldo',
-    apodo: 'AyElAldo',
-    edad: 20,
-    roomies: ['Padre', 'Madre', 'Hermanas'],
-    hobbies: ['Futbol','Programar']
-};
-```
-
-Existen varias formas de acceder a las propiedades. 
-Por ejemplo, en este caso vamos a acceder a ***Padre*** de dos formas distintas:
-
-### Primera forma:
-```js
-// Imprimiendo PADRE
-console.log(persona.roomies[0]);
-```
-### Segunda forma:
-```js
-// Imprimiendo PADRE
-console.log(persona['roomies'][0]);
-```
-
-## **Uso de DELETE**
-***DELETE*** es una palabra reservada que se encarga de eliminar la propiedad de algún objeto.
-
-```js
-// Eliminando la propiedad EDAD
-delete persona.edad
-```
-*************************************************
-## Métodos adicionales de los objetos
-[Leer Documentación Aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object)
-
-- **Freeze:** No permite que se modifiquen las propiedades directas de un objeto. 
-
-```js
-// Haciendo un freeze a PERSONA
-Object.freeze(persona);
-
-// Ya no es posible hacer lo siguiente:
-persona.nombre = 'Aldo';
+Martes
 ```
 
-- **getOwnPropertyNames:** Lista solamente las propiedades de un objeto.
-- **Values:** Lista solamente los valores que corresponden a cada propiedad de un objeto.
+## **Ciclos**
+Uno de los temas más importantes y poderosos, en fundamentos de programación, son los ***bucles*** o ***ciclos***.
+
+Los ciclos son sentencias que sirven para ejecutar código que se puede repetir o iterar. 
+
+Por ejemplo, si queremos imprimir la palabra **HOLA** 5 veces sin usar ciclos, haríamos lo siguiente:
 ```js
-// Obteniendo PROPIEDADES
-let propiedades = Object.getOwnPropertyNames(personaje);
-// Obteniendo valores
-let valores = Object.values(personaje);
-
-// Imprimiendo propiedades y valores
-console.log(propiedades, valores);
+console.log("Hola");
+console.log("Hola");
+console.log("Hola");
+console.log("Hola");
+console.log("Hola");
 ```
+Salida:
+```
+Hola
+Hola
+Hola
+Hola
+Hola
+```
+Sin embargo, los ciclos se de bastante ayuda si queremos ejecutar lo mismo en una menor cantidad de instrucciones. Para esto, existen diferentes sentencias en ***JS*** que nos ayudan a resolver esto **(WHILE, DO-WHILE, FOR, ETC)**.
 
+**Ejemplo: Imprimiendo *HOLA* 5 VECES**
+```js
+for (let i = 0; i < 5; i++) {
+    console.log("Hola");
+}
+```
+Salida:
+```
+Hola
+Hola
+Hola
+Hola
+Hola
+```
+### **USO DE WHILE**
+Sintaxis:
+```js
+while(condicion){
+    // Codigo que se ejecuta siempre y cuando se cumpla la condición  
+}
+```
+Implementación:
+```js
+const diasSemana = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado"
+]
+
+let i = 0; /* En programación, la variable 'i' es usada como la variable auxiliar iteradora en los bucles. */
+
+while(i < 7){
+    console.log(diasSemana[i]);
+}
+```
 ***************************************
 ## **Funciones básicas y flecha**
 
@@ -314,7 +425,6 @@ Salida:
 ```
 Hola
 ```
-
 
 ### **Parámetros**
 Los parámetros son los valores que una función espera recibir para su correcta implementación.
