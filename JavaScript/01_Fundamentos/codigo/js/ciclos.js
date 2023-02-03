@@ -13,5 +13,5 @@ let i = 0; /* En programación, la variable 'i' es usada como la variable auxili
 
 while(i < 7){
     console.log(diasSemana[i]);
-    i--;
+    i++;
 }

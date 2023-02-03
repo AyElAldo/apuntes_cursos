@@ -404,6 +404,16 @@ while(i < 7){
     console.log(diasSemana[i]);
 }
 ```
+Salida:
+```
+Domingo
+Lunes
+Martes
+Miercoles
+Jueves
+Viernes
+Sabado
+```
 ***************************************
 ## **Funciones básicas y flecha**
 
