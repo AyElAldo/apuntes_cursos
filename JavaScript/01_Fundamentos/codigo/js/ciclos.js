@@ -59,3 +59,15 @@ console.warn("FOR");
 for(let k = 0; k < 7; k++){
     console.log(diasSemana[k]);
 }
+
+// LET IN
+console.warn("FOR IN");
+for(i in diasSemana){
+    console.log(diasSemana[i]);
+}
+
+// FOR OF
+console.warn("FOR OF");
+for(i of diasSemana){
+    console.log(i);
+}

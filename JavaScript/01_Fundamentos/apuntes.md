@@ -528,6 +528,41 @@ Jueves
 Viernes
 Sabado
 ```
+
+## **FOR IN**
+***JavaScript*** nos facilita recorrer arreglos, ya que hace las iteraciones necesarias hasta que ya no existan mas elementos en el arreglo. Se implementa usando la siguiente sintaxis:
+```js
+for (variable_iteradora in arreglo){
+    // Bloque de codigo
+}
+```
+Implementacion:
+```js
+// Imprimiendo los dias de la semana
+for (let i in diasSemana){
+    console.log(diasSemana[i]); // i contiene el indice
+}
+```
+
+## **FOR OF**
+El ***FOR OF*** es similar al ***FOR IN***, la única diferencia es que ***FOR OF*** extrae el valor del correspondiente índice en cada iteración.
+
+Implementación:
+```js
+for(let i of diasSemana){
+    console.log(i); // i contiene el valor 
+}
+```
+Salida:
+```
+Domingo
+Lunes
+Martes
+Miercoles
+Jueves
+Viernes
+Sabado
+```
 ***************************************
 ## **Funciones básicas y flecha**
 
