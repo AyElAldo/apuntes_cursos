@@ -414,6 +414,120 @@ Jueves
 Viernes
 Sabado
 ```
+
+### **Uso de BREAK y CONTINUE**
+En algunas ocasiones requerimos que algun bucle termine o alguna iteración no se realice.  
+Para esto nos sirven las palabras reservadas ***break*** y ***continue***.
+
+**BREAK** sirve para finalizar con todo un ciclo. Es decir, una vez que pasa por esta palabra reservada, el ciclo termina y pasa con el siguiente código.
+
+**Ejemplo: Uso de break**
+```js
+// BREAK
+i = 0
+while(i < 7){
+    // Cuando i sea igual a 3, el ciclo finaliza
+    if(i === 3){
+        break;    
+    }
+    console.log(diasSemana[i]);
+    i++;
+}
+console.log("Ciclo finalizado.");
+```
+Salida:
+```
+Domingo
+Lunes
+Martes
+Ciclo finalizado.
+```
+
+Por otra parte, ***continue*** solamente omite una iteración y continua con el ciclo.
+**Ejemplo: Uso de CONTINUE** 
+```js
+// CONTINUE
+i = 0
+while(i < 7){
+    // Cuando i sea igual a 3, omite esta iteracion y continua con la siguiente
+    if(i === 3){
+        i++;
+        continue;    
+    }
+    console.log(diasSemana[i]);
+    i++;
+}
+console.log("Ciclo finalizado.");
+```
+Salida:
+```
+Domingo
+Lunes
+Martes
+Jueves
+Viernes
+Sabado
+Ciclo finalizado.
+```
+
+### **DO WHILE**
+Es una sentencia iterativa que funciona de forma similar al ***while***, la única diferencia es que, primeramente, ejecuta el código, y una vez que termina, evalúa la condición.  
+Es decir, el código del bucle se ejecuta al menos una vez.
+
+Sintaxis:
+```js
+do{
+    // La primera vez que pasa por el DO, siempre se ejecuta
+    // Las demás veces el código que se ejecuta si y solo si se cumple la condicion
+} while(condicion);
+```
+Implementación:
+```js
+// DO WHILE
+let j = 0;
+do{
+    console.log(diasSemana[j]);
+    j++;
+}while(j < 7);
+```
+**Nota: En esta ocasión usamos como variable iteradora la letra ' *j* '.**
+
+Salida:
+```
+Domingo
+Lunes
+Martes
+Miercoles
+Jueves
+Viernes
+Sabado
+```
+
+## **FOR**
+Sintaxis:
+```js
+for(inicializa variable iteradora; condicion; cambio a variable){
+    // Bloque de codigo que se ejecuta mientras la condicion se cumpla
+}
+```
+Implementación:
+```js
+// FOR
+for(let k = 0; k < 7; k++){
+    console.log(diasSemana[k]);
+}
+```
+**Nota: Se puede leer como 'Haz un ciclo inicializando la variable *k* en 0 y ejecuta las instrucciones siempre y cuando se cumpla la condición. Por cada iteración que hagas, incrementa *k* en uno.'**
+Salida:
+```
+Domingo
+Lunes
+Martes
+Miercoles
+Jueves
+Viernes
+Sabado
+```
 ***************************************
 ## **Funciones básicas y flecha**
 
