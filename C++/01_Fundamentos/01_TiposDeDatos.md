@@ -11,7 +11,7 @@ int numero = 10; // Variable tipo ENTERO llamada NUMERO que contiene el valor de
 ```
 - **Flotantes:** Son números que además de abarcar valores enteros, toman valores decimales
 ```cpp
-float pi = 3.14159; // Variable tipo FLOTANTE llamada PI que contiene el valor de 3.14159
+float numero_pi = 3.14159; // Variable tipo FLOTANTE llamada NUMERO_PI que contiene el valor de 3.14159
 ```
 - **Booleanos:** Son datos que solamente contienen verdadero o falso.
 ```cpp
