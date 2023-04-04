@@ -36,9 +36,9 @@ Son palabras que ya están definidas por el lenguaje y cada una tiene un uso en 
 
 ********************************************
 ## **Operadores Aritméticos, lógicos y Relacionales en JS**
-Para relizar operaciones en ***JavaScript***, y en otros lenguajes de programación, se usan símbolos específicos que entiende cada uno de estos.
+Para relizar operaciones en ***JavaScript***, y en otros lenguajes de programación, se usan símbolos específicos que entienden cada uno de estos.
 
-A continuación, se presentan los símbolos usados para reealizar este tipo de operaciones con la sitaxis de JavaScript.
+A continuación, se presentan los símbolos usados para realizar este tipo de operaciones con la sitaxis de JavaScript.
 
 ***Nota: Solo se revisarán los símbolos. No se explicarán las resolución de operaciones, a menos que sean propias de JavaScript.***
 
