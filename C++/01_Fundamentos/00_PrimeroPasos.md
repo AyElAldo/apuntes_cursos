@@ -14,7 +14,7 @@ Originalmente se le adoptó el nombre C++ haciendo referencia a que es la versi�
 
 Antes de comenzar, es necesario que entiendas lo siguiente:
 
-- Como en todos lenguaje, existen bloques llamados **comentarios**. En C++ existen dos tipos de comentarios. 
+- Como en todo lenguaje, existen bloques llamados **comentarios**. En C++ existen dos tipos de comentarios. 
 
 El primero con dos barras diagonales ***( // )*** seguido de caracteres, los cuales seran comentarios de una sola línea.
 ```cpp
@@ -30,9 +30,9 @@ Ultima línea comentada
 ```
 - Para cualquier programa de entrada y salida en C++ se necesita la inclusión de la biblioteca estándar de entrada y salida **\<iostream>**. 
 ```cpp
-#include <iostream> //
+#include <iostream> 
 ```    
-- Todo el flujo del programa a implementar es llamada **main** y debe estar contenida dentro de un bloque llamada ***función principal***.
+- Todo el flujo del programa a implementar es llamado **main** y debe estar contenida dentro de un bloque llamada ***función principal***.
 Sintaxis
 ```cpp
 // Se declara la función principal
