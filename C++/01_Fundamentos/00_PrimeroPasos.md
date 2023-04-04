@@ -58,3 +58,38 @@ Aqui hay una lista de algunas palabras reservadas de C++:
 - friend
 - goto
 - this
+
+## **Using namespace std**
+
+Más a futuro, cuando vamos a hacer uso de funciones es necesario usar el **std** para tener el alcance a esas funciones. El inconveniente con esto es que es muy molesto y repetitivo. 
+
+***Ejemplo:***
+```cpp
+#include<iostream>
+
+int main(){
+    std::cout<<"Hola mundo";
+    std::endl; // Salto de linea
+    std::cout<<"Adios Mundo";
+}
+```
+Salida:
+```
+Hola Mundo
+
+Adios Mundo
+```
+A continuación, se codifica un programa con la misma salida pero usando el ***namespace std***.
+
+Quedaría de la siguiente manera:
+```cpp
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    cout<<"Hola Mundo";
+    endl; // Salto de linea
+    cout<<"Adios Mundo";
+}
+```
