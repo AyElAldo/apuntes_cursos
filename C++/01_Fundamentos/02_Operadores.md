@@ -59,16 +59,16 @@ res = -19 < 9; // true
 ```cpp
 res = 14 <= -10; // false
 ```
+- **Diferente que ( != )**
+```cpp
+res = 15 != 10; // res = true
+```
 - **Igual que ( == )**
 ```cpp
 // Usando operadores aritméticos
 res = 10 == (2*5); // res = (10 == 10) = true
 ```
 **Nota: No confundir ( = ) con ( == ). El primero es un operador de asignación y el segundo un operador relacional.**
-- **Diferente que ( != )**
-```cpp
-res = 15 != 10; // res = true
-```
 
 ## **Operadores Lógicos**
 Son operaciones que llevan a cabo operaciones **lógicas** con **entradas boolenadas**, entregando como resultado un valor **booleano**.
@@ -97,3 +97,5 @@ res = !(5 > 3); // res = false
 // res = !(true)
 // res = false
 ```
+
+
