@@ -112,7 +112,7 @@ int main(){
     cout<<"Ingresa tu nombre completo: ";
     cin.getline(nombre, 30, '\n');
     // Imprimimos su nombre completo
-    cout<<"Buenos dias "<<nombre<<", que tengas en un buen dia.";
+    cout<<"Buenos dias "<<nombre<<", que tengas un buen dia.";
 
     return 0;
 }
@@ -120,5 +120,5 @@ int main(){
 Salida:
 ```
 Ingresa tu nombre completo: Cinthya Santiago Perez
-Buenos dias Cinthya Santiago Perez, que tengas en un buen dia.
+Buenos dias Cinthya Santiago Perez, que tengas un buen dia.
 ```
