@@ -14,10 +14,14 @@ Originalmente se le adoptó el nombre C++ haciendo referencia a que es la versi�
 
 Antes de comenzar, es necesario que entiendas lo siguiente:
 
-- Como en todo lenguaje, existen bloques llamados **comentarios**. En C++ existen dos tipos de comentarios. 
+- Como en todo lenguaje, existen bloques llamados **comentarios**. Los **comentarios** son una herramienta proporcionada por el lenguaje de programación que nos ayuda a documentar los programas. Por esta razón, los comentarios son ignorados por el *compilador (a grandes rasgos, traductor)* de C++.
+
+En C++ existen dos tipos de comentarios. 
 
 El primero con dos barras diagonales ***( // )*** seguido de caracteres, los cuales seran comentarios de una sola línea.
 ```cpp
+// Ejemplo de la impresión de un HOLA MUNDO
+
 cout<<"Hola Mundo"; // A partir de las dos diagonales empieza este comentario.
 ```
 El segundo tipo de comentario abarca varias líneas y tiene caracteres de inicio y de cierre que son **/\* y \*/** respectivamente.
@@ -39,6 +43,25 @@ Sintaxis
 int main(){
     // Aqui va todo el flujo del programa a realizar
 }
+```
+## **Imprimir por pantalla**
+En **C++** existe la función **cout** para imprimir por pantalla.
+Imprimir por pantalla es necesario para que el usuario y el programador sepan el comportamiento del programa, de esta forma, es una de las  funciones más importantes que existen en todo lenguaje.
+
+**Ejemplo: Usando *cout* para imprimir el nombre de una persona**
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    cout<<"Mi nombre es Aldo Santiago";
+}
+```
+Salida:
+```
+Mi nombre es Aldo Santiago
 ```
 
 ## **Palabras reservadas**
@@ -93,3 +116,5 @@ int main(){
     cout<<"Adios Mundo";
 }
 ```
+
+
