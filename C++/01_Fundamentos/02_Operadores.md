@@ -81,7 +81,7 @@ res = (1 < 3) && (10 != 1) && (3 == 1) // res = false
 // res = true && true && false
 // res = false
 ```
-- **OR ( || )**  
+- **OR ( || ) o disyunción lógico**  
 Retorna ***true*** si al menos una proposición es verdadera. De lo contrario retorna ***false***.
 ```cpp
 res = (7 > 3) || (4 == 2) // res = true
