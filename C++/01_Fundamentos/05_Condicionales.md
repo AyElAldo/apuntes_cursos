@@ -66,3 +66,60 @@ Salida:
 El número no es mayor que 0.
 Fin del programa.
 ```
+
+## **Switch**
+Evalúa una expresión y compara el valor de dicha expresión con otra sentencia llamada ***case***. En caso de ser igual, ejecuta el código que se encuentra en esa sentencia y las que siguen. En caso de querer romper la lectura de las demás sentencias, se usa la palabra reservada ***break***.
+
+**Ejemplo: Uso de SWITCH para saber el dia de la semana de acuerdo a una variable inicializada.**
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    /*
+    DOMINGO = 0
+    LUNES = 1
+    MARTES = 2
+    MIERCOLES = 3
+    JIEVES = 4
+    VIERNES = 5
+    SABADO = 6
+    */
+
+    int dia = 2; // MARTES
+
+    switch(dia)
+    {
+    case 0:
+        cout << "Domingo" << endl;
+        break; // Sale del SWITCH
+    case 1:
+        cout << "Lunes" << endl;
+        break; // Sale del SWITCH
+    case 2:
+        cout << "Martes" << endl;
+        break; // Sale del SWITCH
+    case 3:
+        cout << "Miercoles" << endl;
+        break; // Sale del SWITCH
+    case 4:
+        cout << "Jueves" << endl;
+        break; // Sale del SWITCH
+    case 5:
+        cout << "Viernes" << endl;
+        break; // Sale del SWITCH
+    case 6:
+        cout << "Sábado" << endl;
+        break; // Sale del SWITCH
+    default:
+        cout<<"No es valido.";
+    }
+}
+```
+Salida:
+```
+Martes
+```
+
