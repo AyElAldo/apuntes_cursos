@@ -213,7 +213,7 @@ console.log(propiedades, valores);
 ********************************************
 
 ## **Condiciones y Ciclos**
-Cuando estamos creando un programa más complejo, es seguro que tenemos que usar **estructuras de control** e **iteradoración**, o también llamadas *condicionales* y *ciclos* respectivamente.
+Cuando estamos creando un programa más complejo, es seguro que tenemos que usar **estructuras de control** e **iterativas**, o también llamadas *condicionales* y *ciclos* respectivamente.
 
 ### **Condiciones IF y ELSE**
 Existen partes en la lógica del programa en donde es necesaria la toma de decisiones, como ejecutar una parte del código si se cumple una condición o no. 
@@ -231,7 +231,7 @@ if(numero > 0){
 console.log("Fin del programa.");
 ```
 En este caso la variable ***numero*** es igual a 1.  
-Al hacer la comparación dentro del *if(numero > 0)* devuelve un ***true***. Por lo tanto, la código que se encuentra dentro de las llaves se ejecuta.
+Al hacer la comparación dentro del *if(numero > 0)* devuelve un ***true***. Por lo tanto, el código que se encuentra dentro de las llaves se ejecuta.
 
 Salida:
 ```
