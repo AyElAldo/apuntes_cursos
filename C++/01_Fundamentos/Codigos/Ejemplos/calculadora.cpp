@@ -88,7 +88,7 @@ int main(){
         }
 
         /*
-        Solo se ejecuta el bloque de condigo dentro de la
+        Solo se ejecuta el bloque de codigo dentro de la
         estructura IF si se cumplen las siguientes condiciones:
         - La opcion elegida es valida
         - En caso de que el usuario haya elegido division, el divisor debe ser diferente de 0
