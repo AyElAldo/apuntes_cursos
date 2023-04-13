@@ -1,4 +1,4 @@
-#Arreglos bidimensionales
+# Arreglos bidimensionales
 
 Una vez visto arreglos unidimensionales, podemos avanzar a arreglos de dos dimensiones o tablas.
 
@@ -26,4 +26,24 @@ En **C++** se define de la siguiente forma:
 int matriz[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
 ```
 
+Al igual que en los arreglos unidimensionales, se usan ciclos para recorrer la matriz.
 
+Al ser de dos dimensiones se hace uso de **bucles anidados**. La cantidad de bucles requeridos para recorrer una matriz es proporcional a la cantidad de dimensiones.
+
+A continuación, se muestra un ejemplo para imprimir una matriz en **C++**:
+
+```cpp
+for (int i=0; i<filas; i++){
+    for (int j=0; j<columnas; j++){
+        cout<<matriz[filas][columnas]<<"\t";
+    }
+    cout<<endl;
+} 
+```
+Salida: 
+```
+1   2   3
+4   5   6  
+7   8   9
+```
+- El salto de línea **cout<<endl** se escribe al final del primer bucle para hacer un salto una vez que las columnas sean impresas. De esta forma, se le da formato a la matriz.
