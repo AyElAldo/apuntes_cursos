@@ -3,9 +3,9 @@
 Este repositorio contiene **apuntes** de varios lenguajes de programación. Así como ejercicios y pequeños proyectos hechos con algún lenguaje conveniente para la resolución del mismo.
 
 *Actualmente, se han agregado los siguientes lenguajes:*
-- C++
-- JavaScript
-- Python (PROXIMAMENTE)
+- [C++](C%2B%2B/)
+- [JavaScript](JavaScript/)
+- [Python](Python/) (PROXIMAMENTE)
 
 El repositorio siempre está en constante actualización. 
 
