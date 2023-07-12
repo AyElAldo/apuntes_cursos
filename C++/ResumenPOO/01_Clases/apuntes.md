@@ -104,7 +104,7 @@ class Circulo {
     
     El código correspondiente a los métodos se puede definir en el mismo bloque donde se define la clase (clase ***Rectángulo*** y ***Círculo***) o en otro apartado.
 
-- No es obligatorio que los atributos sean **privados** y los métodos **públicos**. 
+- No es obligatorio que todos los atributos sean **privados** y los métodos **públicos**. 
 
     Esto se hace como una buena práctica de programación, ya que hacer referencia a que estamos usando ***Encapsulación*** (se explica mas adelante).
 
@@ -124,6 +124,183 @@ O bien, usando ***punteros:***
 Persona *miPersona = new Persona(); 
 ```
 
+**Importante:** Para poder usar el operador ``new`` se necesita la biblioteca ``stdlib.h``.
+
 ### Nota (Objetos):
 - Para el segundo ejemplo, se utiliza el operador **'new'** para crear dinámicamente un objeto de la clase ***Persona***. La expresión ``new Persona()`` solicita memoria para almacenar el objeto en tiempo de ejecución y devuelve un puntero al objeto creado. 
 - Al instanciar el objeto de la clase ***Persona***, en ninguno de los dos casos, les hemos asignado valores a sus atributos (***nombre*** y ***edad***). Sin embargo, el objeto único ***miPersona*** ya tiene todos los atributos y métodos definidos en la clase **Persona**.
+
+### **1.4.1 Acceso a Atributos y metodos**
+
+Hagamos de cuenta que tenemos la siguiente clase que representa un ***Punto*** en un plano cartesiano:
+
+***Nota: Para este caso, tanto los atributos como los métodos serán públicos.***
+```cpp
+class Punto {
+    public:
+        double x;
+        double y;
+
+        void imprimirCoordenadas() {
+            cout<<"Coordenadas: ("<<x<< ", "<<y<< ")"<<endl;
+        }
+};
+```
+
+Luego, dentro de la función ***main***, instanciamos un objeto de la clase ***Punto*** y posteriormente, modificamos los atributos del objeto, accediendo mediante el operador ***->***. Finalmente, llamamos al método **imprimirCoordenadas()**.
+
+```cpp
+int main(){
+    Punto *p1 = new Punto();
+
+    // Asignamos valores a sus coordenadas X y Y
+    p1->x = 2;
+    p1->y = -3;
+
+    // Accedemos al metodo
+    p1->imprimirCoordenadas();
+}
+```
+**Nota: Podemos acceder a los atributos y métodos debido a que todos estos se definieron en la clase como elementos públicos.**
+
+***Salida:***
+```
+Coordenadas: (2, -3)
+```
+
+## 1.5 Más ejemplos de acceso a atributos y métodos
+
+Ejemplo usando una clase **Persona**:
+```cpp
+#include <iostream>
+#include <string>
+
+// Clase
+class Persona {
+    public:
+        // Atributos públicos
+        string nombre;
+        int edad;
+
+        // Métodos públicos
+        void saludar() {
+            cout << "Hola, mi nombre es " << nombre << " y tengo " << edad << " años." << std::endl;
+        }
+
+        void cumplirAnio() {
+            edad++;
+            cout << "¡Feliz cumpleaños! Ahora tengo " << edad << " años." << endl;
+        }
+};
+
+// main
+int main() {
+    // Crear objeto de la clase Persona
+    Persona *persona1 = new Persona();
+    
+    // Acceder y modificar atributos públicos
+    persona1->nombre = "Juan";
+    persona1->edad = 25;
+
+    // Acceder a métodos públicos
+    persona1->saludar();      // Salida: Hola, mi nombre es Juan y tengo 25 años.
+    persona1->cumplirAnio();  // Salida: ¡Feliz cumpleaños! Ahora tengo 26 años.
+
+    return 0;
+}
+```
+
+Ejemplo usando una clase **Libro**:
+```cpp
+#include <iostream>
+#include <string>
+
+class Libro {
+    public:
+        // Atributos públicos
+        string titulo;
+        string autor;
+        int anioPublicacion;
+
+        // Métodos públicos
+        void mostrarInformacion() {
+            cout << "Título: " << titulo << endl;
+            cout << "Autor: " << autor << endl;
+            cout << "Año de publicación: " << anioPublicacion << endl;
+        }
+
+        void establecerAnioPublicacion(int anio) {
+            anioPublicacion = anio;
+        }
+};
+
+int main() {
+    // Crear objeto de la clase Libro
+    Libro libro1;
+    
+    // Acceder y modificar atributos públicos
+    libro1.titulo = "Cien años de soledad";
+    libro1.autor = "Gabriel García Márquez";
+    libro1.anioPublicacion = 1967;
+
+    // Acceder a métodos públicos
+    libro1.mostrarInformacion();
+    // Salida:
+    // Título: Cien años de soledad
+    // Autor: Gabriel García Márquez
+    // Año de publicación: 1967
+
+    libro1.establecerAnioPublicacion(1970);
+    libro1.mostrarInformacion();
+    // Salida (actualización del año de publicación):
+    // Título: Cien años de soledad
+    // Autor: Gabriel García Márquez
+    // Año de publicación: 1970
+
+    return 0;
+}
+```
+
+## Notas (Ejemplos):
+- Se usa el operador ``->`` cuando los objetos son instanciados de la forma ``Objeto miObjeto = new Objeto();``, de lo contrario se usa el operador punto '``.``' (Ejemplo usando la clase ***Libro***). 
+
+## 1.5 Encapsulación
+
+La encapsulación es un principio fundamental de la programación orientada a objetos que consiste en ocultar los detalles internos de una clase y proporcionar una interfaz controlada para acceder y manipular los datos y métodos de la clase.
+
+La encapsulación se logra mediante la combinación de modificadores de acceso (**public, private y protected**) y el uso de métodos de acceso (**getters y setters**) para interactuar con los atributos privados de la clase.
+
+En muy pocas palabras, se usan métodos públicos (**getters y setters**) para acceder a los atributos de la clase.
+
+**Para mejor explicación, te dejo un ejemplo paso a paso:**
+
+1. Se define la clase con atributos privados y métodos públicos.
+
+Para este caso, yo usaré la clase ***Círculo***:
+
+```cpp
+class Circulo{
+    private:
+        float radio;
+
+    public:
+        // Getter
+        float getRadio(){
+            return radio;
+        }
+
+        // Setter
+        void setRadio(float _radio){
+            radio = _radio;
+        }
+
+        void obtenerPerimetro(){
+            cout<<"El perimetro es: "<<3.14159 * radio * 2;
+        }
+        void obtenerArea(){
+            cout<<"El area es: "<<3.14159 * radio*radio;
+        }
+};
+```
+
+
