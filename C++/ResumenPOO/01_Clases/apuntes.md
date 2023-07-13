@@ -51,7 +51,7 @@ class Persona {
         int edad;
     public:
         // Método miembro 
-        void saludar(){}
+        void saludar();
 };
 ```
 
