@@ -174,7 +174,7 @@ Ejemplo usando una clase **Persona**:
 ```cpp
 #include <iostream>
 #include <string>
-
+using namespace std;
 // Clase
 class Persona {
     public:
@@ -214,7 +214,7 @@ Ejemplo usando una clase **Libro**:
 ```cpp
 #include <iostream>
 #include <string>
-
+using namespace std;
 class Libro {
     public:
         // Atributos públicos
@@ -262,7 +262,7 @@ int main() {
 ```
 
 ## Notas (Ejemplos):
-- Se usa el operador ``->`` cuando los objetos son instanciados de la forma ``Objeto miObjeto = new Objeto();``, de lo contrario se usa el operador punto '``.``' (Ejemplo usando la clase ***Libro***). 
+- Se usa el operador ``->`` cuando los objetos son instanciados de la forma ``Objeto miObjeto = new Objeto();``, de lo contrario se usa el operador punto ``.`` (Ejemplo usando la clase ***Libro***). 
 
 ## 1.5 Encapsulación
 
@@ -272,7 +272,7 @@ La encapsulación se logra mediante la combinación de modificadores de acceso (
 
 En muy pocas palabras, se usan métodos públicos (**getters y setters**) para acceder a los atributos de la clase.
 
-**Para mejor explicación, te dejo un ejemplo paso a paso:**
+**Para una mejor explicación, te dejo un ejemplo paso a paso:**
 
 1. Se define la clase con atributos privados y métodos públicos.
 
@@ -302,5 +302,108 @@ class Circulo{
         }
 };
 ```
+En este caso, no podemos acceder al atributo (***radio***) fuera de la clase.
+
+Observe que se incluyeron dos métodos llamados ``getRadio()`` y ``setRadio(float _radio)``. El primero será usado para obtener el valor del atributo ***radio***, mientras que el segundo se usará para modificar este valor.
+
+2. En la función **main** se añaden getters y setters para acceder y modificar el atributo **radio**:
+
+```cpp
+int main(){
+    Circulo *c1 = new Circulo();
+    // Se le asigna el valor 3 al radio
+    c1->setRadio(3); // Ya no se usa    c1->radio = 3;
+
+    // Se accede al valor
+    cout<<"El valor del radio es: "<<c1->getRadio()<<endl;
+
+    c1->obtenerArea();
+    c1->obtenerPerimetro();
+}
+```
+
+En resumen, cuando veas que los atributos a una clase son privadas, es muy probable que en los métodos se usen ``getters`` y ``setters``. Esto es el ***encapsulamiento***.
+
+## 1.6 Más ejemplos de encapsulamiento
+
+Ejemplo usando una clase ***Persona:***
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Persona {
+    private:
+        string nombre;
+        int edad;
+
+    public:
+        // Métodos de acceso (getters y setters)
+        string getNombre() const {
+            return nombre;
+        }
+
+        void setNombre(const string& nuevoNombre) {
+            nombre = nuevoNombre;
+        }
+
+        int getEdad() const {
+            return edad;
+        }
+
+        void setEdad(int nuevaEdad) {
+            if (nuevaEdad >= 0) {
+                edad = nuevaEdad;
+            }
+        }
+};
+
+int main() {
+    Persona *persona = new Persona();
+    persona->setNombre("Juan");
+    persona->setEdad(25);
+    cout << "Nombre: " << persona->getNombre() << endl;
+    cout << "Edad: " << persona->getEdad() << endl;
+    return 0;
+}
+```
+Ejemplo usando una clase ***Rectangulo:***
+
+```cpp
+#include <iostream>
+#include <string>
+using nameapace std;
+class Rectangulo {
+    private:
+        double largo;
+        double ancho;
+
+    public:
+        // Método para calcular el área
+        double calcularArea() const {
+            return largo * ancho;
+        }
+
+        // Método para establecer las dimensiones
+        void setDimensiones(double nuevoLargo, double nuevoAncho) {
+            if (nuevoLargo > 0 && nuevoAncho > 0) {
+                largo = nuevoLargo;
+                ancho = nuevoAncho;
+            }
+        }
+};
+
+int main() {
+    Rectangulo rectangulo;
+    rectangulo.setDimensiones(5.0, 3.0);
+
+    double area = rectangulo.calcularArea();
+    cout << "Área del rectángulo: " << area << endl;
+
+    return 0;
+}
+```
+
 
 
